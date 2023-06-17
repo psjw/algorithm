@@ -6,17 +6,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
-import java.util.Optional;
+import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class Main_12891 {
-    static int checkCount;
     static int result;
     static char[] arr;
-    static int[] secretArr;
+    static int[] secretCntArr;
 
-    static int[] nowArr;
+    static int[] nowCntArr;
+
+    static Map<Character,Integer> secretMap = Map.of('A',0,'C',1,'G',2,'T',3);
 
 
     public static void main(String[] args) throws IOException {
@@ -25,87 +27,49 @@ public class Main_12891 {
             StringTokenizer stk = new StringTokenizer(br.readLine());
             int S = Integer.parseInt(stk.nextToken());
             int P = Integer.parseInt(stk.nextToken());
-            arr = new char[S];
-            secretArr = new int[P];
-            nowArr = new int[P];
-            result = 0;
-            checkCount = 0;
-            arr = br.readLine().toCharArray();
+            arr = new char[P];
+            secretCntArr = new int[4];
+            nowCntArr = new int[4];
+
+            String secretStr = br.readLine();
+            arr = secretStr.toCharArray();
             stk = new StringTokenizer(br.readLine());
-            StringTokenizer tmpStk = stk;
-
-            IntStream.range(0, P).forEach(index -> {
-                secretArr[index] = Integer.parseInt(tmpStk.nextToken());
-                if (secretArr[index] == 0)
-                    checkCount++;
-            });
-            IntStream.range(0, P).forEach(index -> {
-                Add(arr[index]);
-            });
-            if (checkCount == 4) {
-                result++;
+            int count = 0;
+            while(stk.hasMoreTokens()){
+                secretCntArr[count] = Integer.parseInt(stk.nextToken());
+                count++;
             }
+            int size = 0;
+            for(int i = 0 ; i<= arr.length;i++){
+                if(size == P){
+                    for(int j = 0; j <4 ;j++){
+                        if(nowCntArr[j] < secretCntArr[j]){
+                            break;
+                        }
+                        if(j == 3){
+                            result++;
+                        }
+                    }
+                }
+                if(i == arr.length){
+                    break;
+                }
+                //add
+                if(size <= P){
+                    nowCntArr[secretMap.get(arr[i])]++;
+                    size++;
+                }
 
-            for (int i = P; i < S; i++) {
-                int j = i - P;
-                Add(arr[j]);
-                Remove(arr[j]);
-                if (checkCount == 4) {
-                    result++;
+                //remove
+                if(size > P){
+                    nowCntArr[secretMap.get(arr[i - P])]--;
+                    size--;
                 }
             }
+
             bw.write(result + "\n");
             bw.flush();
 
-
         }
     }
-
-    private static void Remove(char c) {
-        Arrays.stream(CheckCharacter.values())
-                .filter(checkCharacter -> checkCharacter.getCheckChar() == c)
-                .forEach(checkCharacter -> {
-                    if (nowArr[checkCharacter.getCheckCharIndex()] == secretArr[checkCharacter.getCheckCharIndex()]){
-                        checkCount++;
-                    }
-                    nowArr[checkCharacter.getCheckCharIndex()]--;
-                });
-
-    }
-
-    private static void Add(char c) {
-        Arrays.stream(CheckCharacter.values())
-                .filter(checkCharacter -> checkCharacter.getCheckChar() == c)
-                .forEach(checkCharacter -> {
-                    nowArr[checkCharacter.getCheckCharIndex()]++;
-                    if (nowArr[checkCharacter.getCheckCharIndex()] == secretArr[checkCharacter.getCheckCharIndex()]) {
-                        checkCount++;
-                    }
-                });
-
-    }
-
-    public enum CheckCharacter {
-        A('A', 0),
-        B('B', 1),
-        C('C', 2),
-        D('D', 3);
-
-        private char checkChar;
-        private int checkCharIndex;
-
-        CheckCharacter(char checkChar, int checkCharIndex) {
-            this.checkChar = checkChar;
-            this.checkCharIndex = checkCharIndex;
-        }
-
-        public char getCheckChar() {
-            return checkChar;
-        }
-
-        public int getCheckCharIndex() {
-            return checkCharIndex;
-        }
-    }
-
 }
