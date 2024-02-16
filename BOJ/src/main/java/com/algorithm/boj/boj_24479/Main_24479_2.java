@@ -44,7 +44,7 @@ public class Main_24479_2 {
             IntStream.rangeClosed(1, V).forEach(x -> {
                 try {
                     bw.write(String.valueOf(visited[x]));
-                    bw.write("\n");
+                    bw.newLine();
                     bw.flush();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
