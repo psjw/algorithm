@@ -6,9 +6,9 @@ import java.util.List;
 
 public class 잘라서배열만들기 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(solution("abc1Addfggg4556b",6))); //["abc1Ad", "dfggg4", "556b"]
-        System.out.println(Arrays.toString(solution("abc1Addfggg4556b",1))); //["abc1Addfggg4556b"]
-        System.out.println(Arrays.toString(solution("abcdef123",3))); //["abc", "def", "123"]
+        System.out.println(Arrays.toString(solution('abc1Addfggg4556b',6))); //['abc1Ad', 'dfggg4', '556b']
+        System.out.println(Arrays.toString(solution('abc1Addfggg4556b',1))); //['abc1Addfggg4556b']
+        System.out.println(Arrays.toString(solution('abcdef123',3))); //['abc', 'def', '123']
     }
 
     public static String[] solution(String my_str, int n) {

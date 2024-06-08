@@ -4,8 +4,8 @@ import java.util.stream.Collectors;
 
 public class A로B만들기 {
     public static void main(String[] args) {
-        System.out.println(solution("olleh", "hello")); //1
-        System.out.println(solution("allpe", "apple")); //0
+        System.out.println(solution('olleh', 'hello')); //1
+        System.out.println(solution('allpe', 'apple')); //0
     }
 
     private static int solution(String before, String after) {

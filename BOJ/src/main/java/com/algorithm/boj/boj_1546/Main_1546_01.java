@@ -16,7 +16,7 @@ public class Main_1546_01 {
                 max = Math.max(temp, max);
             }
             double avg = ((sum*100)/ max) / N;
-            bw.write(avg + "\n");
+            bw.write(avg + '\n');
             bw.flush();
         }
     }

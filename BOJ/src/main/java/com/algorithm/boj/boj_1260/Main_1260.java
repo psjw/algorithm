@@ -45,7 +45,7 @@ public class Main_1260 {
             answer.stream().forEach(x -> {
                 try {
                     bw.write(String.valueOf(x));
-                    bw.append(" ");
+                    bw.append(' ');
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -59,7 +59,7 @@ public class Main_1260 {
             answer.stream().forEach(x -> {
                 try {
                     bw.write(String.valueOf(x));
-                    bw.append(" ");
+                    bw.append(' ');
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

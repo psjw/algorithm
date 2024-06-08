@@ -5,8 +5,8 @@ import java.util.stream.IntStream;
 
 public class 편지 {
     public static void main(String[] args) {
-        System.out.println(solution("happy birthday!")); //30
-        System.out.println(solution("I love you~")); //22
+        System.out.println(solution('happy birthday!')); //30
+        System.out.println(solution('I love you~')); //22
 
     }
 

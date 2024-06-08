@@ -30,7 +30,7 @@ public class Main_2018 {
                     startIdx++;
                 }
             }
-            bw.write(count + "\n");
+            bw.write(count + '\n');
             bw.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);

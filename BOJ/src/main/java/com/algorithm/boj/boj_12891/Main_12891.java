@@ -67,7 +67,7 @@ public class Main_12891 {
                 }
             }
 
-            bw.write(result + "\n");
+            bw.write(result + '\n');
             bw.flush();
 
         }

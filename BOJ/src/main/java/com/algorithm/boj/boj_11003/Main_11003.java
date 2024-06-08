@@ -22,7 +22,7 @@ public class Main_11003 {
                 if (deque.getFirst().index <= i - L) {
                     deque.removeFirst();
                 }
-                bw.write(deque.getFirst().value + "\n");
+                bw.write(deque.getFirst().value + '\n');
             }
             bw.flush();
         }

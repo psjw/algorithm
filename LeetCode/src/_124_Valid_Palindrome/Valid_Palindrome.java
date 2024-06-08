@@ -1,8 +1,6 @@
 package _124_Valid_Palindrome;
 
-import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Valid_Palindrome {
     public static void main(String[] args) {
@@ -41,10 +39,10 @@ public class Valid_Palindrome {
 
     public boolean isPalindrome2(String s) {
         String result = s.chars()
-                .filter(Character::isLetterOrDigit)
-                .map(Character::toLowerCase)
-                .mapToObj(x -> Character.toString((char)x))
-                .collect(Collectors.joining());
+                    .map(Character::toLowerCase)
+                    .filter(Character::isLetterOrDigit)
+                    .mapToObj(x -> Character.toString((char)x))
+                    .collect(Collectors.joining());
 
         StringBuilder sb = new StringBuilder(result);
         return sb.toString().contentEquals(sb.reverse());

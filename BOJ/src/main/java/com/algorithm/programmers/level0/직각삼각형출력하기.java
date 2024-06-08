@@ -11,9 +11,9 @@ public class 직각삼각형출력하기 {
         StringBuilder sb = new StringBuilder();
         IntStream.range(0, n).forEach(index -> {
             IntStream.rangeClosed(0, index).forEach(x -> {
-                sb.append("*");
+                sb.append('*');
             });
-            sb.append("\n");
+            sb.append('\n');
         });
         System.out.println(sb.toString());
     }

@@ -4,12 +4,12 @@ import java.util.stream.IntStream;
 
 public class 가위바위보 {
     public static void main(String[] args) {
-        System.out.println(solution("2")); //"0"
-        System.out.println(solution("205")); //"052"
+        System.out.println(solution('2')); //'0'
+        System.out.println(solution('205')); //'052'
     }
 
     public static String solution(String rsp) {
-        String answer = "";
+        String answer = '';
         //가위 2 , 바위 0 , 보 5
         StringBuilder sb = new StringBuilder();
         rsp.chars().mapToObj(Character::getNumericValue)

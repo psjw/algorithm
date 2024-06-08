@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class 숨어있는숫자의덧셈_2 {
     public static void main(String[] args) {
-        System.out.println(solution("aAb1B2cC34oOp")); //37
-        System.out.println(solution("1a2b3c4d123")); //133
+        System.out.println(solution('aAb1B2cC34oOp')); //37
+        System.out.println(solution('1a2b3c4d123')); //133
     }
     private static int solution(String my_string) {
         int answer = 0;
-        answer = Arrays.stream(my_string.split("[a-z|A-Z]")).filter(x -> !x.isEmpty()).mapToInt(Integer::parseInt).sum();
+        answer = Arrays.stream(my_string.split('[a-z|A-Z]')).filter(x -> !x.isEmpty()).mapToInt(Integer::parseInt).sum();
         return answer;
     }
 

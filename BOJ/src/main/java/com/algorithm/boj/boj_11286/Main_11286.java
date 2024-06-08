@@ -24,9 +24,9 @@ public class Main_11286 {
                 int temp = Integer.parseInt(br.readLine());
                 if(temp == 0){
                     if(absPriorityQueue.isEmpty()){
-                        sb.append("0\n");
+                        sb.append('0\n');
                     }else{
-                        sb.append(absPriorityQueue.poll() + "\n");
+                        sb.append(absPriorityQueue.poll() + '\n');
                     }
                 }else{
                     absPriorityQueue.add(temp);

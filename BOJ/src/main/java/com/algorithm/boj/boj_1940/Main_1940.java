@@ -41,7 +41,7 @@ public class Main_1940 {
                 }
             }
 
-            bw.write(count + "\n");
+            bw.write(count + '\n');
             bw.flush();
         }
     }

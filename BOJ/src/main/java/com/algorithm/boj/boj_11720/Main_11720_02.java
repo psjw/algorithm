@@ -14,7 +14,7 @@ public class Main_11720_02 {
             IntStream.range(0,N).forEach(index -> {
                 sum.addAndGet(Integer.parseInt(String.valueOf(Character.valueOf(numbers[index]))));
             });
-            bw.write(sum.toString()+"\n");
+            bw.write(sum.toString()+'\n');
             bw.flush();
         }
     }

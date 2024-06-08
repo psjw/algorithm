@@ -27,7 +27,7 @@ public class Main_2614 {
                 count++;
             }
 
-            bw.write(queue.poll()+"\n");
+            bw.write(queue.poll()+'\n');
             bw.flush();
         }
     }

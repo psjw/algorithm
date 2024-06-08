@@ -29,14 +29,14 @@ public class Main_11659 {
         });
 
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out, "utf-8"));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out, 'utf-8'));
         IntStream.range(0, M).forEach(index -> {
             try {
                 StringTokenizer questionStringTokenizer = new StringTokenizer(br.readLine());
                 min.set(Integer.parseInt(questionStringTokenizer.nextToken()));
                 max.set(Integer.parseInt(questionStringTokenizer.nextToken()));
                 int sum = sumByEachArr[max.get()] - sumByEachArr[min.get()-1];
-                bw.write(sum+"\n");
+                bw.write(sum+'\n');
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
