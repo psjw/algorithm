@@ -41,10 +41,10 @@ public class Valid_Palindrome {
 
     public boolean isPalindrome2(String s) {
         String result = s.chars()
-                    .map(Character::toLowerCase)
-                    .filter(Character::isLetterOrDigit)
-                    .mapToObj(x -> Character.toString((char)x))
-                    .collect(Collectors.joining());
+                .filter(Character::isLetterOrDigit)
+                .map(Character::toLowerCase)
+                .mapToObj(x -> Character.toString((char)x))
+                .collect(Collectors.joining());
 
         StringBuilder sb = new StringBuilder(result);
         return sb.toString().contentEquals(sb.reverse());
