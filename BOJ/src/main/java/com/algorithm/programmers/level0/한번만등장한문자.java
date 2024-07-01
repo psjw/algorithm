@@ -6,15 +6,15 @@ import java.util.Map;
 
 public class 한번만등장한문자 {
     public static void main(String[] args) {
-        System.out.println(solution('abcabcadc')); //'d'
-        System.out.println(solution('abdc')); //'abcd'
-        System.out.println(solution('hello')); //'eho'
-        System.out.println(solution('baaaab')); //''
+        System.out.println(solution("abcabcadc")); //'d'
+        System.out.println(solution("abdc")); //'abcd'
+        System.out.println(solution("hello")); //'eho'
+        System.out.println(solution("baaaab")); //''
 
     }
 
     public static String solution(String s) {
-        String answer = '';
+        String answer = "";
         Map<String, Integer> hmap = new HashMap<>();
 
         s.chars().mapToObj(Character::toString).forEach(x -> {

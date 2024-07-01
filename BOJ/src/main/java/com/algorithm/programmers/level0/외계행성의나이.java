@@ -10,7 +10,7 @@ public class 외계행성의나이 {
     }
 
     public static String solution(int age) {
-        String answer = '';
+        String answer = "";
         answer = String.valueOf(age)
                 .chars()
                 .map(x -> x + 49)

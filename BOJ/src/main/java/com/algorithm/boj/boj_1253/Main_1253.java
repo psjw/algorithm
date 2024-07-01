@@ -14,7 +14,7 @@ public class Main_1253 {
             int N = Integer.parseInt(br.readLine());
             long[] arr = new long[N];
             int result = 0;
-            arr = Arrays.stream(br.readLine().split(' ')).mapToLong(Long::parseLong).sorted().toArray();
+            arr = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).sorted().toArray();
             for(int i = 0; i< arr.length;i++){
                 long findNum = arr[i];
                 int k = 0;

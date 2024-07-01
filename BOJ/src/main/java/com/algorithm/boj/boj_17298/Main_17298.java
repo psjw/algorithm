@@ -9,7 +9,7 @@ public class Main_17298 {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
              BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out))) {
             int N = Integer.parseInt(br.readLine());
-            int[] arr = Arrays.stream(br.readLine().split(' ')).map(Integer::parseInt).mapToInt(x -> x).toArray();
+            int[] arr = Arrays.stream(br.readLine().split(" ")).map(Integer::parseInt).mapToInt(x -> x).toArray();
             Stack<Integer> stack = new Stack<>();
             Stack<Integer> tempStack = new Stack<>();
             for (int i = N - 1; i >= 0; i--) {

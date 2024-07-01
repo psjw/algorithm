@@ -20,7 +20,7 @@ public class Main_1874 {
 
                 for (int j = index; j <= temp; j++) {
                     stack.push(j);
-                    sb.append('+\n');
+                    sb.append("+\n");
                     if(j ==  temp){
                         index = temp+1;
                     }
@@ -28,12 +28,12 @@ public class Main_1874 {
 
                 if (stack.peek() == temp) {
                     stack.pop();
-                    sb.append('-\n');
+                    sb.append("-\n");
                 }
             }
 
             if(stack.size() > 0){
-                bw.write('NO\n');
+                bw.write("NO\n");
             }else{
                 bw.write(sb.toString());
             }

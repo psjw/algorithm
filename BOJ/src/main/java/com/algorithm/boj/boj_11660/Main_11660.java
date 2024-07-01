@@ -66,12 +66,12 @@ class Direction {
 
     @Override
     public String toString() {
-        return 'Direction{' +
-                'x1=' + x1 +
-                ', y1=' + y1 +
-                ', x2=' + x2 +
-                ', y2=' + y2 +
-                '}';
+        return "Direction{" +
+                "x1=" + x1 +
+                ", y1=" + y1 +
+                ", x2=" + x2 +
+                ", y2=" + y2 +
+                "}";
     }
 }
 public class Main_11660 {

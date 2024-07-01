@@ -5,12 +5,12 @@ import java.util.stream.IntStream;
 
 public class 배열자르기 {
     public static void main(String[] args) {
-        System.out.println(solution('jaron')); //noraj
-        System.out.println(solution('bread')); //daerb
+        System.out.println(solution("jaron")); //noraj
+        System.out.println(solution("bread")); //daerb
     }
 
     private static String solution(String my_string) {
-        String answer = '';
+        String answer = "";
         Stack<String> stack = new Stack<>();
         my_string.chars().mapToObj(Character::toString).forEach(x -> {
             stack.push(x);

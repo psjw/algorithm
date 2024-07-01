@@ -51,9 +51,9 @@ public class Main_13565_bfs {
             }
             OptionalInt first = Arrays.stream(visited[N]).filter(x -> x > 0).findFirst();
             if(first.isPresent()){
-                bw.write('YES');
+                bw.write("YES");
             }else{
-                bw.write('NO');
+                bw.write("NO");
             }
             bw.flush();
         }

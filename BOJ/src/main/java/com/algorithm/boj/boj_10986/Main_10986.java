@@ -42,7 +42,7 @@ public class Main_10986 {
                 }
             });
             long ans = result.get() + result2.get();
-            bw.write(ans+'\n');
+            bw.write(ans+"\n");
             bw.flush();
 
         } catch (IOException e) {

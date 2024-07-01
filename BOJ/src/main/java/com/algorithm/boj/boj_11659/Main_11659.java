@@ -29,7 +29,7 @@ public class Main_11659 {
         });
 
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out, 'utf-8'));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out, "utf-8"));
         IntStream.range(0, M).forEach(index -> {
             try {
                 StringTokenizer questionStringTokenizer = new StringTokenizer(br.readLine());

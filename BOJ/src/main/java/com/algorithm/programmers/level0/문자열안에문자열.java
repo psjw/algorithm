@@ -2,9 +2,9 @@ package com.algorithm.programmers.level0;
 
 public class 문자열안에문자열 {
     public static void main(String[] args) {
-        System.out.println(solution('ab6CDE443fgh22iJKlmn1o', '6CD')); //1
-        System.out.println(solution('ppprrrogrammers', 'pppp')); //2
-        System.out.println(solution('AbcAbcA', 'AAA')); //2
+        System.out.println(solution("ab6CDE443fgh22iJKlmn1o", "6CD")); //1
+        System.out.println(solution("ppprrrogrammers", "pppp")); //2
+        System.out.println(solution("AbcAbcA", "AAA")); //2
     }
 
     public static int solution(String str1, String str2) {

@@ -21,7 +21,7 @@ public class Main_2606_2 {
             graph = new int[N + 1][N + 1];
             visited = new int[N + 1];
             for (int i = 1; i <= M; i++) {
-                String[] splitEdge = br.readLine().split(' ');
+                String[] splitEdge = br.readLine().split(" ");
                 int startNode = Integer.parseInt(splitEdge[0]);
                 int endNode = Integer.parseInt(splitEdge[1]);
                 graph[startNode][endNode] = 1;
