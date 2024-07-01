@@ -37,7 +37,7 @@ public class Main_2606 {
 
             //3. 출력
             answer  = Arrays.stream(visit).sum() - 1;
-            bw.write(answer+"");
+            bw.write(String.valueOf(answer));
             bw.flush();
         }
     }
