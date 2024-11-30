@@ -3,14 +3,14 @@ package _937_Recorder_Data_in_Log_Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReorderLogFiles {
+public class RecorderLogFiles {
     public static void main(String[] args) {
-        ReorderLogFiles reorderLogFiles = new ReorderLogFiles();
-        reorderLogFiles.reorderLogFiles(new String[]{"dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"});
-        reorderLogFiles.reorderLogFiles(new String[]{"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"});
+        RecorderLogFiles reorderLogFiles = new RecorderLogFiles();
+        reorderLogFiles.recorderLogFiles(new String[]{"dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"});
+        reorderLogFiles.recorderLogFiles(new String[]{"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"});
 
     }
-    public String[] reorderLogFiles(String[] logs) {
+    public String[] recorderLogFiles(String[] logs) {
         List<String> digitList = new ArrayList<>();
         List<String> letterList = new ArrayList<>();
 

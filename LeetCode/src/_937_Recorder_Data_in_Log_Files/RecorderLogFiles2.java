@@ -3,7 +3,7 @@ package _937_Recorder_Data_in_Log_Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReorderLogFiles2 {
+public class RecorderLogFiles2 {
     public static void main(String[] args) {
         reorderLogFiles(new String[]{"dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"});
         reorderLogFiles(new String[]{"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"});
