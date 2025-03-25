@@ -61,7 +61,6 @@ public class Main_16173_bfs {
                     queue.add(new Coordinate(nextX, nextY));
                 }
             }
-
         }
     }
 
