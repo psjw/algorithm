@@ -29,8 +29,8 @@ public class Main_11003 {
     }
 
     static class Node {
-        public int value;
-        public int index;
+        private int value;
+        private int index;
 
         public Node(int value, int index) {
             this.value = value;

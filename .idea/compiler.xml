@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="Programmers" target="11" />
       <module name="Programmers.main" target="11" />
       <module name="Programmers.test" target="11" />
     </bytecodeTargetLevel>
