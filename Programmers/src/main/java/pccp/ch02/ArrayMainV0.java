@@ -2,7 +2,7 @@ package pccp.ch02;
 
 import java.util.Arrays;
 
-public class MainArrayV0 {
+public class ArrayMainV0 {
     public static void main(String[] args) {
         int arr[] = new int[5];
         System.out.println(arr);
