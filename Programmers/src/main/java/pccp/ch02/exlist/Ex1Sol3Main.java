@@ -1,8 +1,6 @@
-package pccp.ch02.ex;
+package pccp.ch02.exlist;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.stream.IntStream;
 
 public class Ex1Sol3Main {

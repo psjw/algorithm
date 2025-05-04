@@ -1,4 +1,4 @@
-package pccp.ch02.ex;
+package pccp.ch02.exlist;
 
 import java.util.Arrays;
 import java.util.LinkedList;

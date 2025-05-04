@@ -1,8 +1,7 @@
-package pccp.ch02.ex;
+package pccp.ch02.exlist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Ex1Main {
