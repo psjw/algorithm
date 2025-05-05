@@ -1,11 +1,10 @@
 package pccp.ch02.exmap;
 
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
-public class Ex2Sol2MapMain {
+public class Ex2Sol3MapMain {
     public static void main(String[] args) {
         System.out.println(solution(new String[]{"leo", "kiki", "eden"}, new String[]{"eden", "kiki"}));
         System.out.println(solution(new String[]{"marina", "josipa", "nikola", "vinko", "filipa"},
@@ -14,20 +13,17 @@ public class Ex2Sol2MapMain {
                 , new String[]{"stanko", "ana", "mislav"}));
     }
 
-    //O(n)
+
+    //O(nlogn)
     public static String solution(String[] participant, String[] completion) {
-        Map<String, Integer> players = new HashMap<>();
+        Arrays.sort(participant); // n O(nlogn)
+        Arrays.sort(completion); // n-1 O(nlogn)
+
         //O(n)
-        for (String player : participant) {
-            players.put(player, players.getOrDefault(player, 0) + 1);
+        for (int i = 0; i < completion.length; i++) {
+            if(!participant[i].equals(completion[i])) return participant[i];
         }
-        //O(n)
-        for (String player : completion) {
-            int n = players.get(player) - 1;
-            if (n == 0) players.remove(player);
-            else players.put(player, n);
-        }
-        //O(1)
-        return players.keySet().iterator().next();
+
+        return participant[participant.length - 1];
     }
 }
