@@ -1,8 +1,9 @@
 package pccp.ch02.exmap;
 
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Ex3MapMain {
     public static void main(String[] args) {
@@ -15,15 +16,17 @@ public class Ex3MapMain {
     public static int solution(String[][] clothes) {
         int answer = 0;
         Map<String, Integer> map = new HashMap<>();
-        for (int i = 0; i < clothes.length; i++) {
-            String key = clothes[i][1];
+        for (String[] clothe : clothes) {
+            String key = clothe[1];
             map.put(key, map.getOrDefault(key, 0) + 1);
         }
         int result = 1;
-        for(int i =0 ; i < map.size(); i++){
-//            result
+        Iterator<Integer> iterator = map.values().iterator();
+        while (iterator.hasNext()) {
+            result = result * (iterator.next() + 1);
         }
-        answer = result;
+
+        answer = result - 1;
         return answer;
     }
 }
