@@ -6,20 +6,18 @@
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
         <option name="testRunner" value="PLATFORM" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/BOJ" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/BOJ" />
+            <option value="$PROJECT_DIR$/../../../01. 알고리즘/source/algorithm/BOJ" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Programmers" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/Programmers" />
+            <option value="$PROJECT_DIR$/../../../01. 알고리즘/source/algorithm/Programmers" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,12 +1,10 @@
-package pccp.ch02.exmap;
+package pccp.ch03.exmap;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Ex2Sol1MapMain {
+public class Ex2MapMain {
     public static void main(String[] args) {
         System.out.println(solution(new String[]{"leo", "kiki", "eden"}, new String[]{"eden", "kiki"}));
         System.out.println(solution(new String[]{"marina", "josipa", "nikola", "vinko", "filipa"},
@@ -16,15 +14,15 @@ public class Ex2Sol1MapMain {
     }
 
     public static String solution(String[] participant, String[] completion) {
-        List<String> players = new LinkedList<>();
-
-        for(String p : participant) {
-            players.add(p);
+        String answer = "";
+        Map<String, Long> participantMap = Arrays.stream(participant)
+                .collect(Collectors.groupingBy(x -> x, Collectors.counting()));
+        for (String com : completion) {
+            participantMap.computeIfPresent(com, (k, v) -> v - 1);
         }
-        for(String c : completion) {
-            players.remove(c); // 병목 구간 -> 타임아웃 발생
-        }
+        answer = participantMap.entrySet().stream().filter(x -> x.getValue() > 0)
+                .map(x -> x.getKey()).findFirst().get();
 
-        return players.get(0);
+        return answer;
     }
 }

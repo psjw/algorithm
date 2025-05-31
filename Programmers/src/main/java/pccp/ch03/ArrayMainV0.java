@@ -1,4 +1,4 @@
-package pccp.ch02;
+package pccp.ch03;
 
 import java.util.Arrays;
 

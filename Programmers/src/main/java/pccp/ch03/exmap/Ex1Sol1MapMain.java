@@ -1,13 +1,11 @@
-package pccp.ch02.exmap;
+package pccp.ch03.exmap;
 
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 
-public class Ex1Sol2MapMain {
+public class Ex1Sol1MapMain {
     public static void main(String[] args) {
         System.out.println(solution(new int[]{3, 1, 2, 3}));
         ;
@@ -22,11 +20,11 @@ public class Ex1Sol2MapMain {
         // [1,2,3] : 3개
         // N/2 : 2개
         // 포켓몬 종류의 개수를 구한다.
-        List<Integer> list = new LinkedList<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
-            if(!list.contains(n)) { list.add(n); }
+            map.put(n, 0);
         }
-        int n1 = list.size();
+        int n1 = map.keySet().size();
 
         // 배열 크기의 1/2을 구한다.
         int n2 = nums.length / 2;

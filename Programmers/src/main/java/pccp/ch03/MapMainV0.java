@@ -1,7 +1,5 @@
-package pccp.ch02;
+package pccp.ch03;
 
-import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
